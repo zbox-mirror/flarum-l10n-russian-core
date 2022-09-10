@@ -4,21 +4,19 @@ on:
   - push
 
 env:
-  src_domain: "${{ github.server_url }}"
-  src_owner: "${{ github.repository_owner }}"
-  src_repo: "${{ github.repository }}"
+  dst_owner: "zmarket"
 
 jobs:
   clone:
     if: ${{ github.repository_owner == 'zbox' }}
     runs-on: ubuntu-latest
     name: "Clone"
-    env:
-      dst_domain: "${{ github.server_url }}"
-      dst_owner: "zmarket"
     steps:
       - run: |
-          echo "repo_name=$( echo '${{ env.src_repo }}' | awk -F '/' '{ print $2 }' )" >> $GITHUB_ENV
+          echo "repo_name=$( echo '${{ github.repository }}' | awk -F '/' '{ print $2 }' )" >> $GITHUB_ENV
+        shell: bash
+      - run: |
+          echo "${{ github.api_url }}"
         shell: bash
       - run: |
           curl -X POST \
@@ -30,9 +28,9 @@ jobs:
         shell: bash
       - uses: ghastore/mirror@main
         with:
-          src_repo: "${{ env.src_domain }}/${{ env.src_repo }}.git"
+          src_repo: "${{ github.server_url }}/${{ github.repository }}.git"
           src_user: "${{ secrets.BOT_GITHUB_NAME }}"
           src_token: "${{ secrets.BOT_GITHUB_TOKEN }}"
-          dst_repo: "${{ env.dst_domain }}/${{ env.dst_owner }}/${{ env.repo_name }}.git"
+          dst_repo: "${{ github.server_url }}/${{ env.dst_owner }}/${{ env.repo_name }}.git"
           dst_user: "${{ secrets.BOT_GITHUB_NAME }}"
           dst_token: "${{ secrets.BOT_GITHUB_TOKEN }}"
