@@ -10,12 +10,12 @@
 
 **Flarum** использует [**Composer**](https://getcomposer.org/) для управления зависимостями и расширениями.
 
-Русский пакет локализации доступен в [**Packagist**](https://packagist.org/packages/cmfstore/flarum-l10n-russian-core) и может быть установлен при помощи **Composer**.
+Русский пакет локализации доступен в [**Packagist**](https://packagist.org/packages/zmarket/flarum-l10n-russian-core) и может быть установлен при помощи **Composer**.
 
 Убедитесь, что **Composer** установлен на вашем компьютере, и введите следующую команду в терминале, находясь в корневой директории **Flarum**:
 
 ```sh
-composer require cmfstore/flarum-l10n-russian-core
+composer require zmarket/flarum-l10n-russian-core
 ```
 
 Так же, данная команда может быть использована для обновления языкового пакета, без обновления сторонних компонентов.
@@ -27,7 +27,7 @@ composer require cmfstore/flarum-l10n-russian-core
 Для обновления локализации необходимо выполнить следующие команды:
 
 ```sh
-composer update cmfstore/flarum-l10n-russian-core
+composer update zmarket/flarum-l10n-russian-core
 php flarum cache:clear
 ```
 
@@ -36,7 +36,7 @@ php flarum cache:clear
 Для удаления локализации необходимо выполнить следующие команды:
 
 ```sh
-composer remove cmfstore/flarum-l10n-russian-core
+composer remove zmarket/flarum-l10n-russian-core
 php flarum cache:clear
 ```
 
@@ -47,7 +47,7 @@ php flarum cache:clear
 Я развиваю две локализации Flarum:
 
 1. [официальная](https://github.com/flarum-lang/russian);
-2. [неофициальная](https://github.com/cmfstore/flarum-l10n-russian-core).
+2. [неофициальная](https://github.com/zbox/flarum-l10n-russian-core).
 
 Неофициальная локализация отличается лишь тем, что используется только на моих проектах. Все изменения в неофициальной версии переносятся в официальную.
 

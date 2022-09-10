@@ -1,9 +1,9 @@
 {
-  "name": "cmfstore/flarum-l10n-russian-core",
+  "name": "zmarket/flarum-l10n-russian-core",
   "description": "Flarum russian language pack (UNOFFICIAL).",
   "type": "flarum-extension",
   "license": "MIT",
-  "homepage": "https://github.com/cmfstore",
+  "homepage": "https://z17.dev/",
   "keywords": [
     "z17",
     "extension",
@@ -29,17 +29,17 @@
     }
   ],
   "support": {
-    "source": "https://github.com/cmfstore/flarum-l10n-russian-core",
-    "issues": "https://github.com/cmfstore/flarum-l10n-russian-core/issues",
-    "docs": "https://github.com/cmfstore/flarum-l10n-russian-core/wiki",
-    "forum": "https://github.com/cmfstore/flarum-l10n-russian-core/discussions"
+    "source": "https://github.com/zbox/flarum-l10n-russian-core",
+    "issues": "https://github.com/zbox/flarum-l10n-russian-core/issues",
+    "docs": "https://github.com/zbox/flarum-l10n-russian-core/wiki",
+    "forum": "https://github.com/zbox/flarum-l10n-russian-core/discussions"
   },
   "require": {
     "flarum/core": "^1.1"
   },
   "suggest": {
     "flarum/flarum": "Flarum",
-    "cmfstore/flarum-l10n-russian-extra": "Flarum extra russian language pack (UNOFFICIAL)."
+    "zmarket/flarum-l10n-russian-extra": "Flarum extra russian language pack (UNOFFICIAL)."
   },
   "extra": {
     "branch-alias": {
@@ -49,8 +49,8 @@
       "title": "Русский",
       "category": "language",
       "info": {
-        "website": "https://github.com/cmfstore",
-        "support": "https://github.com/cmfstore/flarum-l10n-russian-core/discussions"
+        "website": "https://z17.dev/",
+        "support": "https://github.com/zbox/flarum-l10n-russian-core/discussions"
       },
       "icon": {
         "image": "icon.svg",
@@ -60,7 +60,7 @@
       }
     },
     "flagrow": {
-      "discuss": "https://github.com/cmfstore/flarum-l10n-russian-core/discussions"
+      "discuss": "https://github.com/zbox/flarum-l10n-russian-core/discussions"
     },
     "flarum-locale": {
       "code": "ru",
