@@ -1,0 +1,43 @@
+name: "Repository"
+
+on:
+  - push
+
+env:
+  src_domain: "${{ github.server_url }}"
+  src_owner: "${{ github.repository_owner }}"
+  src_repo: "${{ github.repository }}"
+
+jobs:
+
+  # ------------------------------------------------------------------------------------------------------------------ #
+  # GitHub.
+  # ------------------------------------------------------------------------------------------------------------------ #
+
+  market:
+    if: ${{ github.repository_owner == 'zbox' }}
+    runs-on: ubuntu-latest
+    name: "Market"
+    env:
+      dst_domain: "${{ github.server_url }}"
+      dst_owner: "zmarket"
+    steps:
+      - run: |
+          echo "repo_name=$( echo '${{ env.src_repo }}' | awk -F '/' '{ print $2 }' )" >> $GITHUB_ENV
+        shell: bash
+      - run: |
+          curl -X POST \
+          -H 'Authorization: Bearer ${{ secrets.BOT_GITHUB_TOKEN }}' \
+          -H 'Accept: application/vnd.github+json' \
+          'https://api.github.com/orgs/${{ env.dst_owner }}/repos' \
+          -d '{"name":"${{ env.repo_name }}","private":false,"has_issues":false,"has_projects":false,"has_wiki":false}' \
+          -s -o '/dev/null'
+        shell: bash
+      - uses: ghastore/mirror@main
+        with:
+          src_repo: "${{ env.src_domain }}/${{ env.src_repo }}.git"
+          src_user: "${{ secrets.BOT_GITHUB_NAME }}"
+          src_token: "${{ secrets.BOT_GITHUB_TOKEN }}"
+          dst_repo: "${{ env.dst_domain }}/${{ env.dst_owner }}/${{ env.repo_name }}.git"
+          dst_user: "${{ secrets.BOT_GITHUB_NAME }}"
+          dst_token: "${{ secrets.BOT_GITHUB_TOKEN }}"
