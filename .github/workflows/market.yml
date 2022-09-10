@@ -16,13 +16,10 @@ jobs:
           echo "repo_name=$( echo '${{ github.repository }}' | awk -F '/' '{ print $2 }' )" >> $GITHUB_ENV
         shell: bash
       - run: |
-          echo "${{ github.api_url }}"
-        shell: bash
-      - run: |
           curl -X POST \
           -H 'Authorization: Bearer ${{ secrets.BOT_GITHUB_TOKEN }}' \
           -H 'Accept: application/vnd.github+json' \
-          'https://api.github.com/orgs/${{ env.dst_owner }}/repos' \
+          '${{ github.api_url }}/orgs/${{ env.dst_owner }}/repos' \
           -d '{"name":"${{ env.repo_name }}","private":false,"has_issues":false,"has_projects":false,"has_wiki":false}' \
           -s -o '/dev/null'
         shell: bash
