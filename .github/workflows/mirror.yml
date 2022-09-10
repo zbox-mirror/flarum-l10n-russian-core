@@ -125,8 +125,7 @@ jobs:
           -H 'Accept: application/json' \
           -H 'Content-Type: application/json' \
           '${{ env.dst_domain }}/api/v1/orgs/${{ env.dst_owner }}/repos' \
-          -d '{"name":"${{ env.repo_name }}"}' \
-          -s -o '/dev/null'
+          -d '{"name":"${{ env.repo_name }}"}'
         shell: bash
       - uses: ghastore/mirror@main
         with:
