@@ -1,4 +1,4 @@
-name: "Repository"
+name: "Market"
 
 on:
   - push
@@ -9,10 +9,10 @@ env:
   src_repo: "${{ github.repository }}"
 
 jobs:
-  market:
+  clone:
     if: ${{ github.repository_owner == 'zbox' }}
     runs-on: ubuntu-latest
-    name: "Market"
+    name: "Clone"
     env:
       dst_domain: "${{ github.server_url }}"
       dst_owner: "zmarket"
