@@ -49,6 +49,7 @@ flarum-suspend:
 
   # Translations in this namespace are used by suspension email notifications
   email:
+    no_reason_given: "Причина блокировки не указана."
     suspended:
       subject: "Ваш аккаунт заблокирован"
       body: |

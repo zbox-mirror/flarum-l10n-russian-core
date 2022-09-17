@@ -11,6 +11,10 @@ flarum-likes:
     permissions:
       like_posts_label: "Использовать систему симпатий"
 
+    settings:
+      like_own_posts_help: "При включении этой опции, пользователи смогут оценивать свои собственные сообщения."
+      like_own_posts_label: "Оценивать собственные сообщения"
+
   # Translations in this namespace are used by the forum user interface.
   forum:
 
@@ -35,3 +39,7 @@ flarum-likes:
     # These translations are used in the Settings page.
     settings:
       notify_post_liked_label: "Понравилось моё сообщение"
+
+    # These translations are used in the User profile page.
+    user:
+      likes_link: "Симпатии"

@@ -1,12 +1,10 @@
 flarum-subscriptions:
-
   ##
   # UNIQUE KEYS - The following keys are used in only one location each.
   ##
 
   # Translations in this namespace are used by the forum user interface.
   forum:
-
     # These translations are displayed as tooltips for discussion badges.
     badge:
       following_tooltip: => flarum-subscriptions.ref.following
@@ -33,6 +31,7 @@ flarum-subscriptions:
     # These translations are used in the Settings page.
     settings:
       follow_after_reply_label: "Автоматически подписываться на дискуссии, в которых я участвую"
+      notify_for_all_posts_label: "Уведомлять о каждом новом сообщении, а не только о последнем в дискуссии"
       notify_new_post_label: "Ответ в дискуссиях, на которые я подписан"
 
     # These translations are used in the subscription menu displayed to the right of the post stream.
@@ -49,7 +48,6 @@ flarum-subscriptions:
 
   # Translations in this namespace are used in emails sent by the forum.
   email:
-
     # These translations are used in emails sent when a post is made in a subscribed discussion
     new_post:
       subject: "[Новое сообщение] {title}"
