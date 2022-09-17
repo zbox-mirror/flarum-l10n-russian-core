@@ -1,7 +1,7 @@
 flarum-package-manager:
   admin:
     exceptions:
-      composer_command_failure: "Ошибка при выполнении. Проверьте журналы Composer в 'storage/logs/composer'."
+      composer_command_failure: 'Ошибка при выполнении. Проверьте журналы Composer в "storage/logs/composer".'
       extension_already_installed: "Расширение уже установлено."
       extension_not_installed: "Расширение не найдено."
 
@@ -22,7 +22,7 @@ flarum-package-manager:
       update: "Обновить"
 
     file_permissions: >
-      Менеджеру пакетов требуются права на чтение и запись для следующих каталогов и файлов: 'composer.json', 'composer.lock', 'vendor', 'storage', 'storage/.composer'.
+      Менеджеру пакетов требуются права на чтение и запись для следующих каталогов и файлов: "composer.json", "composer.lock", "vendor", "storage", "storage/.composer".
 
     major_updater:
       description: "Основные версии Flarum не имеют обратной совместимости. Это означает, что некоторые установленные расширения и вручную внесённые изменения могут не работать с новой версией Flarum."
