@@ -1,4 +1,4 @@
-name: "VK"
+name: "Share Tag"
 
 on:
   push:
@@ -8,9 +8,9 @@ on:
 jobs:
   post:
     runs-on: ubuntu-latest
-    name: "GitHub Tag"
+    name: "VK"
     steps:
-      - name: "Post GitHub tag"
+      - name: "Sharing GitHub repository tag to VK"
         uses: ghastore/vk@main
         with:
           gh_api: "https://api.github.com/repos/${{ github.repository }}"
