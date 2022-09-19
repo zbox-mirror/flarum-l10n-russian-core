@@ -1,7 +1,9 @@
 name: "VK"
 
 on:
-  - push
+  push:
+    tags:
+      - '*'
 
 jobs:
   post:
