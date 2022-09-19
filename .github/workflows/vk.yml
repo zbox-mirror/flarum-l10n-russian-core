@@ -1,14 +1,16 @@
-name: "VK"
+name: "VK: GitHub Tag"
 
 on:
-  - push
+  push:
+    tags:
+      - '*'
 
 jobs:
   post:
     runs-on: ubuntu-latest
     name: "VK Post"
     steps:
-      - name: "Mirror repository"
+      - name: "Post tag"
         uses: ghastore/vk@main
         with:
           gh_api: "https://api.github.com/repos/${{ github.repository }}"
