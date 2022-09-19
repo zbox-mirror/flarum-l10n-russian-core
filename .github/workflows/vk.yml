@@ -1,4 +1,4 @@
-name: "VK: GitHub Tag"
+name: "VK"
 
 on:
   - push
@@ -6,9 +6,9 @@ on:
 jobs:
   post:
     runs-on: ubuntu-latest
-    name: "VK Post"
+    name: "GitHub Tag"
     steps:
-      - name: "Post tag"
+      - name: "Post GitHub tag"
         uses: ghastore/vk-tag@main
         with:
           gh_api: "https://api.github.com/repos/${{ github.repository }}"
