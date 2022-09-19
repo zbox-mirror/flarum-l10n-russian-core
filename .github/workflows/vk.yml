@@ -1,9 +1,7 @@
 name: "VK: GitHub Tag"
 
 on:
-  push:
-    tags:
-      - '*'
+  - push
 
 jobs:
   post:
