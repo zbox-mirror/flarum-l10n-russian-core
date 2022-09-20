@@ -7,6 +7,7 @@ jobs:
   share:
     if: ${{ github.repository_owner == 'zbox' }}
     runs-on: ubuntu-latest
+    name: "Share"
     steps:
       - name: "Share GitHub repository tag to VK"
         uses: ghastore/vk@main
